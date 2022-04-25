@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print('{:d} Battery street'.format(98))
+string = ' Battery street'
+number = 98
+print('{:d}{}'.format(number, string))
