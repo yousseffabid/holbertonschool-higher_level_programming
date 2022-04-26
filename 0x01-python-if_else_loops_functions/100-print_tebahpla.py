@@ -4,4 +4,4 @@
 for asscii in range(90, 64, -1):
     if asscii % 2 == 0:
         asscii += 32
-    print("{}".format(chr(asscii)), end='')
+    print(f'{chr(asscii)}', end='')
