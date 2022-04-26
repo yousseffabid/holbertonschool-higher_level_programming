@@ -7,6 +7,8 @@ number = random.randint(-10000, 10000)
 string_number = str(number)
 last_character = string_number[-1]
 last_digit = int(last_character)
+if number < 0:
+    last_digit = -last_digit
 
 if last_digit > 5:
     str = 'Last digit of {:d} is {:d} and is greater than 5'
