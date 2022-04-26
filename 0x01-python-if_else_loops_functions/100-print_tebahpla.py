@@ -1,13 +1,7 @@
 #!/usr/bin/python3
 
 
-alternate = 1
-
-for asscii in range(122, 96, -1):
-    if alternate % 2 == 0:
-        new_asccii = asscii - 32
-    else:
-        new_asccii = asscii
-
-    print('{}'.format(chr(new_asccii)), end='')
-    alternate += 1
+for asscii in range(90, 64, -1):
+    if asscii % 2 == 0:
+        asscii += 32
+    print("{}".format(chr(asscii)), end='')
