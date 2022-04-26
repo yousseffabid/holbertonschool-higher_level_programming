@@ -2,4 +2,4 @@
 
 for asscii in range(97, 123):
     letter = chr(asscii)
-    print('{}'.format(letter), end='')
+    print(f'{letter}', end='')
