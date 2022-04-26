@@ -11,11 +11,11 @@ if number < 0:
     last_digit = -last_digit
 
 if last_digit > 5:
-    str = 'Last digit of {:d} is {:d} and is greater than 5'
+    mystr = 'Last digit of {:d} is {:d} and is greater than 5'
     print(str.format(number, last_digit))
 elif last_digit == 0:
-    str = 'Last digit of {:d} is {:d} and is 0'
+    mystr = 'Last digit of {:d} is {:d} and is 0'
     print(str.format(number, last_digit))
 else:
-    str = 'Last digit of {:d} is {:d} and is less than 6 and not 0'
+    mystr = 'Last digit of {:d} is {:d} and is less than 6 and not 0'
     print(str.format(number, last_digit))
