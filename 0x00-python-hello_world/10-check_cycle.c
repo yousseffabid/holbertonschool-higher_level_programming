@@ -7,27 +7,21 @@
 int check_cycle(listint_t *list)
 {
 	unsigned int number_of_traversal, i;
-	listint_t *node_to_check, *current, *head;
+	listint_t *ptr1, *ptr2, *head;
 
 	if (list == NULL || list->next == NULL)
 		return (0);
 
-	current = list;
-	head = list;
-	number_of_traversal = 0;
-	while (list != NULL)
+	ptr1 = list;
+	ptr2 =  list;
+
+	while (ptr1 != NULL)
 	{
-		node_to_check = list->next;
-		number_of_traversal++;
-		for (i = 0; i < number_of_traversal; i++)
-		{
-			if (current == node_to_check)
-				return (1);
-			current = current->next;
-		}
-		current = head;
-		list = list->next;
+		ptr1 = ptr1->next;
+		ptr2 = ptr2->next->next;
+		if (ptr1 == ptr2)
+			return (0);
 	}
-	return (0);
+	return (1);
 }
 
