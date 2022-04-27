@@ -6,7 +6,6 @@
  */
 int check_cycle(listint_t *list)
 {
-	unsigned int number_of_traversal, i;
 	listint_t *ptr1, *ptr2;
 
 	if (list == NULL || list->next == NULL)
