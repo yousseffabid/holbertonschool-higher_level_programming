@@ -11,6 +11,7 @@ if __name__ == "__main__":
         print(f'1: {argv[1]}')
     else:
         print(f'{count - 1} arguments:')
-        for i in range(1, count):
+        i = 1
+        while i < count:
             print(f'{i}: {argv[i]}')
-
+            i += 1
