@@ -7,6 +7,7 @@ def print_matrix_integer(matrix=[[]]):
                     print(f'{element:d }', end='')
                 else:
                     print(f'{element:d}')
+            print('\n')
 
 
 
