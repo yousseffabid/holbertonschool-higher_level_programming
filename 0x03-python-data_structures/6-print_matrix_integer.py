@@ -1,13 +1,6 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if matrix:
-        for row in matrix:
-            for index, element in enumerate(row):
-                print(f'{element}', end='')
-                if index != len(matrix) - 1:
-                    print(' ', end='')
-            print('')
-
-
+    for row in matrix:
+        print(" ".join(f"{element}" for element in row))
 
 
