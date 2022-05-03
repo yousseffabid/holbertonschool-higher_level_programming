@@ -6,9 +6,9 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *fast, *slow, *prev, *temp;
+	listint_t *fast, *slow, *left, *right, *temp1, *temp2;
 
-	if (head == NULL || (*head)->next)
+	if (head == NULL || (*head)->next == NULL)
 		return (0);
 	if (*head == NULL)
 		return (1);
@@ -22,22 +22,24 @@ int is_palindrome(listint_t **head)
 		slow = slow->next;
 	}
 
-	prev = NULL;
+	temp1 = NULL;
+	temp2 = NULL;
 	while (slow)
 	{
-		temp = slow->next;
-		slow->next = prev;
-		prev = temp;
-		slow = temp;
+		temp2 = slow->next;
+		slow->next = temp1;
+		temp1 = slow;
+		slow = temp2;
 	}
 
-	temp = *head;
-	while (prev)
+	right = temp1;
+	left = *head;
+	while (right)
 	{
-		if (temp->n != prev->n)
+		if (left->n != right->n)
 			return (0);
-		prev = prev->next;
-		temp = temp->next;
+		right = right->next;
+		left = left->next;
 	}
 	return (1);
 }
