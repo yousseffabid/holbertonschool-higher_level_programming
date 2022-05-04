@@ -3,7 +3,7 @@ def uniq_add(my_list=[]):
     if my_list:
         my_set = set(my_list)
         result = 0
-        if my_set:
-            for x in my_set:
-                result += x
+        for x in my_set:
+            result += x
         return result
+    return 0
