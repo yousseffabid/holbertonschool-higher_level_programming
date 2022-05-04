@@ -6,4 +6,3 @@ def uniq_add(my_list=[]):
         for x in my_set:
             result += x
         return result
-    return None
