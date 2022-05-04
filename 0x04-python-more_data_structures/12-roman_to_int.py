@@ -9,7 +9,7 @@ def roman_to_int(roman_string):
 
         for i in range(len(roman_string)):
             if i + 1 != len(roman_string) and my_dict[roman_string[i]] <\
-                my_dict[roman_string[i + 1]]:
+                    my_dict[roman_string[i + 1]]:
                 number -= my_dict[roman_string[i]]
             else:
                 number += my_dict[roman_string[i]]
