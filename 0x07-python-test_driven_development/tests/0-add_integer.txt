@@ -1,0 +1,34 @@
+
+-Import=
+========
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+-Function Description-
+======================
+Testing a function that adds two integers
+
+
+-Tests-
+=======
+>>> print(add_integer(1, 2))
+3
+>>> print(add_integer(100, -2))
+98
+
+>>> print(add_integer(2))
+100
+
+>>> print(add_integer(100.3, -2))
+98
+
+>>> print(add_integer(1.3))
+99
+
+>>> print(add_integer(4, "School"))
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> print(add_integer("School", 4))
+Traceback (most recent call last):
+TypeError: a must be an integer
+
