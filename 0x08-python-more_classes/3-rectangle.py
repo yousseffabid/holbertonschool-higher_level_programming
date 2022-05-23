@@ -1,52 +1,66 @@
 #!/usr/bin/python3
-"""define a rectangle"""
+"""create a rectangle
+"""
 
 
 class Rectangle:
-    """define a rectangle"""
+    """Rectangle class
+    """
 
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        """__init__ method
+        """
+        self.height = height
+        self.width = width
+
+    def __str__(self):
+        """__str__ method
+        print the rectangle on print() or str()
+        """
+        my_str = ""
+        if self.__width == 0 or self.__height == 0:
+            return my_str
+        for i in range(self.__height):
+            for j in range(self.__width):
+                my_str += '#'
+            if i is not (self.__height - 1):
+                my_str += "\n"
+        return my_str
 
     @property
     def width(self):
         return self.__width
 
     @width.setter
-    def width(self, width):
-        if type(width) is not int:
+    def width(self, value):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        if width < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
         return self.__height
 
     @height.setter
-    def height(self, height):
-        if type(height) is not int:
+    def height(self, value):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
-        if height < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = height
+        self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        """area method
+        calculate the rectangle object's area
+        """
+        return self.__height * self.__width
 
     def perimeter(self):
-        if self.__width == 0 or self.height == 0:
+        """perimeter method
+        calculate the rectangle object's perimeter
+        """
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__width * 2) + (self.__height * 2)
-
-    def __str__(self):
-        if self.__width == 0 or self.height == 0:
-            return ''
-        rect = ''
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rect += '#'
-            rect += '\n'
-        return rect
+        return 2 * (self.__height + self.__width)
