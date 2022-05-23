@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""define a rectangle"""
+"""create a rectangle
+"""
 
 
 class Rectangle:
-    """define a rectangle"""
+    """Rectangle class
+    """
 
     def __init__(self, width=0, height=0):
-        """initialize instance"""
-        self.__width = width
-        self.__height = height
+        """__init__ method
+        """
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
