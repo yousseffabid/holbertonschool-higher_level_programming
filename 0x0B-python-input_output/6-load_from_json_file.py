@@ -10,6 +10,6 @@ def load_from_json_file(filename):
     return:
         obj(object): object converted from jsonfile
     """
-    with open(filename, 'r', 'utf-8') as a_file:
+    with open(filename) as a_file:
         obj = json.load(a_file)
         return obj
