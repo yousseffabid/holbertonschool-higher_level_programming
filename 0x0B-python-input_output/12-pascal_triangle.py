@@ -12,8 +12,14 @@ def pascal_triangle(n):
         return []
     else:
         my_list = []
+        index = -1
         for i in range(n):
-            number = 11**i
-            sub_list = [int(char) for char in str(number)]
-            my_list.append(sub_list)
+            sublist = []
+            for j in range(i + 1):
+                if j == 0 or j == i:
+                    sublist.append(1)
+                else:
+                    sublist.append(my_list[index][j - 1] + my_list[index][j])
+            index += 1
+            my_list.append(sublist)
         return my_list
