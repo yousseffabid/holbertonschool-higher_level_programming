@@ -1,15 +1,15 @@
 #!/usr/bin/node
 exports.esrever = function (list) {
-  let right = 0;
-  let left = list.length - 1;
+  let left = 0;
+  let right = list.length - 1;
   let temp;
-  while (right < left) {
+  while (left < right) {
     temp = list[left];
     list[left] = right;
     list[right] = temp;
 
-    right += 1;
-    left -= 1;
+    left += 1;
+    right -= 1;
   }
   return list;
 };
