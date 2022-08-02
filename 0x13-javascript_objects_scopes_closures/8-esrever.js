@@ -5,7 +5,7 @@ exports.esrever = function (list) {
   let temp;
   while (left < right) {
     temp = list[left];
-    list[left] = right;
+    list[left] = list[right];
     list[right] = temp;
 
     left += 1;
