@@ -10,7 +10,7 @@ if __name__ == "__main__":
     path_name = "mysql+mysqldb://{}:{}@localhost/{}:3306". \
             format(sys.argv[1], sys.argv[2], sys.argv[3])
 
-    engine = create_engine(path_name)
+    engine = create_engine(path_name, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
 
