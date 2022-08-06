@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Lists all states from the database hbtn_0e_0_usa.
+"""List all states"""
 import sys
 import MySQLdb
 
@@ -8,3 +8,6 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT * FROM `states`")
     [print(s) for s in cur.fetchall()]
+
+    cur.close()
+    db.close()
