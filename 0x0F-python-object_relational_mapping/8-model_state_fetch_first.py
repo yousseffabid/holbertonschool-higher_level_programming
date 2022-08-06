@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""prints the first State object from the database"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
+from model_state import State
 
 
 if __name__ == "__main__":
