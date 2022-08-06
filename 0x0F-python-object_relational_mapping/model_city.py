@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""class city"""
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
