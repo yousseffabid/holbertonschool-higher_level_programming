@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+script that takes in a URL, sends a
+request to the URL and displaysthe value of the X-Request-Id variable
+"""
 from urllib.request import urlopen
 import sys
 
